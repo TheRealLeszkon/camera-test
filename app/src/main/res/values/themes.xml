@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The XML theme only styles the window before Compose takes over
+         (splash frame). All in-app theming lives in ui/theme/Theme.kt. -->
+    <style name="Theme.CameraTest" parent="android:Theme.Material.NoActionBar" />
+</resources>

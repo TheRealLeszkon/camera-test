@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CameraTest</string>
+
+    <!-- Permission gate -->
+    <string name="permission_rationale_title">Camera access needed</string>
+    <string name="permission_rationale_body">This app shows a live camera preview, so it needs permission to use the camera.</string>
+    <string name="permission_denied_body">Camera permission is permanently denied. Enable it in system settings to use the preview.</string>
+    <string name="permission_grant">Grant permission</string>
+    <string name="permission_open_settings">Open settings</string>
+
+    <!-- Camera screen -->
+    <string name="camera_preview_description">Live camera preview</string>
+    <string name="camera_error_title">Camera unavailable</string>
+    <string name="camera_retry">Retry</string>
+</resources>

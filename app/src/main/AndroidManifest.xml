@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Runtime permission: declaring it is necessary but not sufficient. Since
+         API 23 the user must also grant it at runtime (see CameraPermissionGate). -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- required="false" keeps the app installable on camera-less devices
+         (e.g. some tablets, Chromebooks). We degrade gracefully instead. -->
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CameraTest">
+
+        <!-- Deliberately NO android:configChanges for orientation. We let the
+             Activity be recreated on rotation and survive it properly: the
+             ViewModel retains the initialized CameraProvider across the change. -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.CameraTest">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
